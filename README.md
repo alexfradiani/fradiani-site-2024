@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Links to website with artistic work
 
-## Artist Page
+## Engineering Page
 
 Links to page dedicated to engineering career
 
