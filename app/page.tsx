@@ -12,24 +12,23 @@ export default function Home() {
     const tryVanta = () => {
       if (!vantaEffect) {
         try {
-          setVantaEffect(
-            NET({
-              el: myRef.current,
-              gyroControls: true,
-              mouseControls: false,
-              touchControls: false,
-              minHeight: 200.0,
-              minWidth: 200.0,
-              scale: 1.0,
-              scaleMobile: 1.0,
-              color: 0x325f32,
-              backgroundColor: 0x0,
-              points: 18.0,
-              maxDistance: 35.0,
-              spacing: 16.0,
-              showDots: false,
-            })
-          );
+          const vanta = NET({
+            el: myRef.current,
+            gyroControls: true,
+            mouseControls: false,
+            touchControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: 0x325f32,
+            backgroundColor: 0x0,
+            points: 18.0,
+            maxDistance: 35.0,
+            spacing: 16.0,
+            showDots: false,
+          });
+          setVantaEffect(vanta);
         } catch (err) {
           console.log("vanta scripts not ready. Trying again in a second");
           setTimeout(tryVanta, 1000);
