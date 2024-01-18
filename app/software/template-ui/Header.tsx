@@ -133,16 +133,11 @@ function MobileNavigation(
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/software/about">About</MobileNavItem>
-                <MobileNavItem href="/software/articles">
-                  Articles
+                <MobileNavItem href="/software/articles">Career</MobileNavItem>
+                <MobileNavItem href="/software/demos">Demos</MobileNavItem>
+                <MobileNavItem href="/software/philosophy">
+                  Philosophy
                 </MobileNavItem>
-                <MobileNavItem href="/software/projects">
-                  Projects
-                </MobileNavItem>
-                <MobileNavItem href="/software/speaking">
-                  Speaking
-                </MobileNavItem>
-                <MobileNavItem href="/software/uses">Uses</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -186,10 +181,9 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<"nav">) {
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/software/about">About</NavItem>
-        <NavItem href="/software/articles">Articles</NavItem>
-        <NavItem href="/software/projects">Projects</NavItem>
-        <NavItem href="/software/speaking">Speaking</NavItem>
-        <NavItem href="/software/uses">Uses</NavItem>
+        <NavItem href="/software/articles">Career</NavItem>
+        <NavItem href="/software/demos">Demos</NavItem>
+        <NavItem href="/software/philosophy">Philosophy</NavItem>
       </ul>
     </nav>
   );

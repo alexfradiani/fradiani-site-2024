@@ -15,11 +15,9 @@ import logoAirbnb from "@/app/software/images/logos/airbnb.svg";
 import logoFacebook from "@/app/software/images/logos/facebook.svg";
 import logoPlanetaria from "@/app/software/images/logos/planetaria.svg";
 import logoStarbucks from "@/app/software/images/logos/starbucks.svg";
-import image1 from "@/app/software/images/photos/image-1.jpg";
 import image2 from "@/app/software/images/photos/image-2.jpg";
 import image3 from "@/app/software/images/photos/image-3.jpg";
 import image4 from "@/app/software/images/photos/image-4.jpg";
-import image5 from "@/app/software/images/photos/image-5.jpg";
 import {
   type ArticleWithSlug,
   getAllArticles,
@@ -88,14 +86,14 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
+      <Card.Title href={`/software/articles/${article.slug}`}>
         {article.title}
       </Card.Title>
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
+        {article.customDates}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      <Card.Cta>Read more</Card.Cta>
     </Card>
   );
 }
@@ -253,7 +251,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image2, image3, image4].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -275,47 +273,51 @@ function Photos() {
 }
 
 export default async function Home() {
-  let articles = (await getAllArticles()).slice(0, 4);
+  let articles = await getAllArticles();
 
   return (
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software designer, founder, and amateur astronaut.
+            Alexander Fradiani
           </h1>
+          <h2 className="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
+            Systems Engineer, Senior Full-Stack Developer, Holistic Tech Leader.
+          </h2>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            Hi there, I'm Alex. Currently based in Germany, I like to define
+            myself as a polymath. Starting 2024 I'm keeping two separate
+            profiles, one as author / artist{" "}
+            <Link
+              href="https://www.alexfrad.com"
+              className="underline bold text-white"
+            >
+              (alexfrad.com)
+            </Link>{" "}
+            and this one: a summary of my career in software and the different
+            roles I've had the opportunity of experiencing during the years.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
+              href="https://github.com/alexfradiani"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/alex-fradiani/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
+            <SocialLink href="mailto:alexander@fradiani.com" icon={MailIcon} />
           </div>
         </div>
       </Container>
       <Photos />
-      <Container className="mt-24 md:mt-28">
+      <Container className="mt-12 md:mt-12">
+        <h2 className="mb-12 text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
+          Chronological Story
+        </h2>
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (

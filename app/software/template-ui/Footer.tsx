@@ -31,12 +31,12 @@ export function Footer() {
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/software/about">About</NavLink>
-                <NavLink href="/software/projects">Projects</NavLink>
-                <NavLink href="/software/speaking">Speaking</NavLink>
-                <NavLink href="/software/uses">Uses</NavLink>
+                <NavLink href="/software/articles">Career</NavLink>
+                <NavLink href="/software/demos">Demos</NavLink>
+                <NavLink href="/software/philosophy">Philosophy</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Spencer Sharp. All rights
+                &copy; {new Date().getFullYear()} Alexander Fradiani. All rights
                 reserved.
               </p>
             </div>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import NET from "vanta/dist/vanta.net.min";
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [vantaEffect, setVantaEffect] = useState<any>(null);
@@ -51,7 +52,10 @@ export default function Home() {
       >
         <h1 className="text-8xl mb-4 text-center">Pick a Site</h1>
         <div className="flex flex-col justify-center space-y-6 text-xl pt-8 md:flex-row md:w-[750px] md:space-x-6 md:space-y-0">
-          <button className="md:w-1/2 bg-black/40 p-2 border rounded-lg inline-flex items-center text-white p-8">
+          <Link
+            href="/alexfrad"
+            className="md:w-1/2 bg-black/40 p-2 border rounded-lg inline-flex items-center text-white p-8"
+          >
             <Image
               className="mr-6"
               src="/alex-gif-1.gif"
@@ -60,8 +64,11 @@ export default function Home() {
               alt="Artist Page Icon"
             />
             Alex Frad Artist Page
-          </button>
-          <button className="md:w-1/2 bg-black/40 p-2 border rounded-lg inline-flex items-center text-white p-8">
+          </Link>
+          <Link
+            href="/software"
+            className="md:w-1/2 bg-black/40 p-2 border rounded-lg inline-flex items-center text-white p-8"
+          >
             <Image
               className="mr-6"
               src="/alex-gif-2.gif"
@@ -70,7 +77,7 @@ export default function Home() {
               alt="Software Engineering Icon"
             />
             Engineering Profile
-          </button>
+          </Link>
         </div>
       </main>
     </>
