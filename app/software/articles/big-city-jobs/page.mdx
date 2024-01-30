@@ -6,7 +6,7 @@ export const article = {
   date: "2012-01-01",
   title: "Big City Jobs & The Trader Years",
   description:
-    "Moving cities, second startup, building products in different industries, and chasing the holy grail of foreign exchange automated trading...",
+    "Moving cities, second startup, building products in different industries, and chasing the holy grail of foreign exchange automated trading ...",
 };
 
 export const metadata = {
@@ -16,30 +16,9 @@ export const metadata = {
 
 export default (props) => <ArticleLayout article={article} {...props} />;
 
-When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.
-
-To make this possible, we needed to squeeze every drop of performance out of the browser possible. And so Animaginary was born.
-
-```js
-import { animate } from "@planetaria/animaginary";
-
-export function MyComponent({ open, children }) {
-  return (
-    <animate.div
-      in={open}
-      animateFrom="opacity-0 scale-95"
-      animateTo="opacity-100 scale-100"
-      duration={350}
-    >
-      {children}
-    </animate.div>
-  );
-}
-```
-
 So the time came to move into the country's capital, and there I had the
-chance to work for the first time with a stablished large team with
-a defined methodology for development and well-defined practices.
+chance to work for the first time with a stablished large team, with
+standardized methodologies for development and well-defined practices.
 
 ## Maxnegocios
 
@@ -47,14 +26,13 @@ a defined methodology for development and well-defined practices.
   <img src="/software/maxnegocios.jpg" />
 </p>
 
-Lorem markdownum, bracchia in redibam! Terque unda puppi nec, linguae posterior
-in utraque respicere candidus Mimasque formae; quae conantem cervice. Parcite
-variatus, redolentia adeunt. Tyrioque dies, naufraga sua adit partibus celanda
-torquere temptata, erit maneat et ramos, [iam](#) ait dominari
-potitus! Tibi litora matremque fumantia condi radicibus opusque.
+Here was also my professional introduction to the world of web frameworks, and the
+ever-growing philosophy of "don't reinvent the wheel", with both its pros and cons.
+CakePHP was the usual suspect in this case. The platform relied on it for the backend, alongside
+a MySQL database, and a jquery-heavy frontend. My work as full-stack was mainly on the modules for
+blogging and social networking.
 
-Aere repetiti cognataque natus. Habebat vela solutis saepe munus nondum adhuc
-oscula nomina pignora corpus deserat.
+But it wasn't too long before I convinced my former boss—it was another one this time but a pattern started to emerge—to go on our own and launch another company:
 
 ## Visionware
 
@@ -62,22 +40,24 @@ oscula nomina pignora corpus deserat.
   <img src="/software/visionware.png" />
 </p>
 
-Idem se saxa fata pollentibus geminos; quos pedibus. Est urnis Herses omnes nec
-divite: et ille illa furit sim verbis Cyllenius.
+This is the largest team I've lead so far. We invested in developing a couple
+of small original products, but our overall approach was much more pragmatical
+and risk-averse, so the company focused
+mostly on servicing larger clients in web and mobile projects.
 
-1. Captus inpleverunt collo
-2. Nec nam placebant
-3. Siquos vulgus
-4. Dictis carissime fugae
-5. A tacitos nulla viginti
+The highlights for me during this period were:
 
-Ungues fistula annoso, ille addit linoque motatque uberior verso
-[rubuerunt](#) confine desuetaque. _Sanguine_ anteit
-emerguntque expugnacior est pennas iniqui ecce **haeret** genus: peiora imagine
-fossas Cephisos formosa! Refugitque amata [refelli](#)
-supplex. Summa brevis vetuere tenebas, hostes vetantis, suppressit, arreptum
-regna. Postquam conpescit iuvenis habet corpus, et erratica, perdere, tot mota
-ars talis.
+<ul>
+  <li>Leading several projects simultaneously</li>
+  <li>Coaching and assisting the more junior members of our organization</li>
+  <li>
+    While still being able to contribute individually with my own programming
+  </li>
+  <li>While making larger technical decisions for the company as CTO</li>
+</ul>
+
+I kept a balancing act of these, at least for a while, because at some point around 2014 I became a little obssessed
+with the following:
 
 ## Foreign Exchange Trading
 
@@ -86,5 +66,31 @@ ars talis.
 </p>
 
 Of all the entries in my career, this is probably one of the most atypical.
+I'll make the story short by saying that I spent a lot of energy and time
+trying to chase a so-called "holy grail" of automated trading, it was supposed
+to grant me financial freedom, it was the way to beat the games of money and currencies on their own turf.
 
-Link to github for AlxFx and metatrader scripts
+It was a nice concept, but I grew tired—after many attempts—of being absorbed in
+a system that only works with money for the sake of money, exchanging one
+currency for another virtually in one global delusion, adding no real value in
+the world.
+
+Anyway ... some of the work I kept it around, a few of my github repositories remain
+as testament of this phase:
+
+[**_AlxFx:_**](https://github.com/alexfradiani/AlxFx)
+I developed a custom backtesting system. This is one of the tools traders use
+to test strategies by simulating real transactions with past market data.
+It was a very interesting challenge, I needed to process millions of records representing
+years of values for various currencies, and run different operations on top of this
+giant pool of monetary fluctuations.
+This one was specialized to work with Dukascopy's JForex platform, and so Java
+was chosen because that was their their technology of choice (I remain to this
+day very agnostic regarding tech stacks, I'll use whatever works best for the purpose at hand).
+
+[**_Fx2017Indis:_**](https://github.com/alexfradiani/fx2017Indis) and [**_EA_graveyard:_**](https://github.com/alexfradiani/EA_graveyard)
+A collection of strategies and indicators to work within the Metatrader platform.
+They use the MQL (MetaQuotes) language, a sort of C++ super niche cousin.
+
+But ... eventually The Wolf of Wall Street was no more ... I moved to Uruguay, new life and new job,
+more of that in the [next section.](/software/articles/going-international)

@@ -13,16 +13,15 @@ import {
 } from "@/app/software/template-ui/SocialIcons";
 import logoAirbnb from "@/app/software/images/logos/airbnb.svg";
 import logoFacebook from "@/app/software/images/logos/facebook.svg";
-import logoPlanetaria from "@/app/software/images/logos/planetaria.svg";
+import logoCompany from "@/app/software/images/logos/logo-company.svg";
 import logoStarbucks from "@/app/software/images/logos/starbucks.svg";
-import image2 from "@/app/software/images/photos/image-2.jpg";
-import image3 from "@/app/software/images/photos/image-3.jpg";
-import image4 from "@/app/software/images/photos/image-4.jpg";
+import image2 from "@/app/software/images/photos/left_part.png";
+import image3 from "@/app/software/images/photos/middle_part.png";
+import image4 from "@/app/software/images/photos/right_part.png";
 import {
   type ArticleWithSlug,
   getAllArticles,
 } from "@/app/software/lib/articles";
-import { formatDate } from "@/app/software/lib/formatDate";
 
 function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
@@ -111,35 +110,6 @@ function SocialLink({
   );
 }
 
-function Newsletter() {
-  return (
-    <form
-      action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
-      </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
-      </p>
-      <div className="mt-6 flex">
-        <input
-          type="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 sm:text-sm dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10"
-        />
-        <Button type="submit" className="ml-4 flex-none">
-          Join
-        </Button>
-      </div>
-    </form>
-  );
-}
-
 interface Role {
   company: string;
   title: string;
@@ -159,7 +129,7 @@ function Role({ role }: { role: Role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-slate-300 dark:ring-0">
         <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -188,35 +158,46 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: "Planetaria",
-      title: "CEO",
-      logo: logoPlanetaria,
-      start: "2019",
-      end: {
-        label: "Present",
-        dateTime: new Date().getFullYear().toString(),
-      },
+      company: "Rootstrap",
+      title: "Various Roles (see CV)",
+      logo: logoCompany,
+      start: "2018",
+      end: "2022",
     },
     {
-      company: "Airbnb",
-      title: "Product Designer",
-      logo: logoAirbnb,
-      start: "2014",
-      end: "2019",
+      company: "TopTier Labs",
+      title: "Senior Developer",
+      logo: logoCompany,
+      start: "2016",
+      end: "2018",
     },
     {
-      company: "Facebook",
-      title: "iOS Software Engineer",
-      logo: logoFacebook,
-      start: "2011",
-      end: "2014",
+      company: "Visionware International",
+      title: "CTO",
+      logo: logoCompany,
+      start: "2013",
+      end: "2016",
     },
     {
-      company: "Starbucks",
-      title: "Shift Supervisor",
-      logo: logoStarbucks,
-      start: "2008",
-      end: "2011",
+      company: "Maxnegocios",
+      title: "Web & Mobile Developer",
+      logo: logoCompany,
+      start: "2012",
+      end: "2013",
+    },
+    {
+      company: "Tocamobi",
+      title: "CTO",
+      logo: logoCompany,
+      start: "2010",
+      end: "2012",
+    },
+    {
+      company: "Infomedios",
+      title: "Software Developer",
+      logo: logoCompany,
+      start: "2009",
+      end: "2010",
     },
   ];
 
@@ -231,7 +212,11 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button
+        href="/software/Alexander-Fradiani-CV.pdf"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -288,14 +273,14 @@ export default async function Home() {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Hi there, I'm Alex. Currently based in Germany, I like to define
             myself as a polymath. Starting 2024 I'm keeping two separate
-            profiles, one as author / artist{" "}
+            profiles, one as author & artist{" "}
             <Link
               href="https://www.alexfrad.com"
-              className="underline bold text-white"
+              className="font-medium text-teal-500"
             >
               (alexfrad.com)
             </Link>{" "}
-            and this one: a summary of my career in software and the different
+            and this one: a summary of my career in software, and the different
             roles I've had the opportunity of experiencing during the years.
           </p>
           <div className="mt-6 flex gap-6">

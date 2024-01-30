@@ -35,86 +35,84 @@ function Tool({
 }
 
 export const metadata = {
-  title: "Uses",
-  description: "Software I use, gadgets I love, and other things I recommend.",
+  title: "Philosophy",
+  description: "Thoughts on the things that matter",
 };
 
 export default function Uses() {
   return (
     <SimpleLayout
-      title="Software I use, gadgets I love, and other things I recommend."
-      intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+      title="What Matters?"
+      intro="This section is about something that people in technology and engineering tend to oversight, they usually call it &quot;soft skills&quot;, and although it covers some of that, I'm talking about something much more significant. It's about a way of thinking, and a way of being, that enables you to work effectively, individually, and in cooperation with others."
     >
       <div className="space-y-20">
-        <ToolsSection title="Workstation">
-          <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-            I was using an Intel-based 16” MacBook Pro prior to this and the
-            difference is night and day. I’ve never heard the fans turn on a
-            single time, even under the incredibly heavy loads I put it through
-            with our various launch simulations.
-          </Tool>
-          <Tool title="Apple Pro Display XDR (Standard Glass)">
-            The only display on the market if you want something HiDPI and
-            bigger than 27”. When you’re working at planetary scale, every pixel
-            you can get counts.
-          </Tool>
-          <Tool title="IBM Model M SSK Industrial Keyboard">
-            They don’t make keyboards the way they used to. I buy these any time
-            I see them go up for sale and keep them in storage in case I need
-            parts or need to retire my main.
-          </Tool>
-          <Tool title="Apple Magic Trackpad">
-            Something about all the gestures makes me feel like a wizard with
-            special powers. I really like feeling like a wizard with special
-            powers.
-          </Tool>
-          <Tool title="Herman Miller Aeron Chair">
-            If I’m going to slouch in the worst ergonomic position imaginable
-            all day, I might as well do it in an expensive chair.
+        <ToolsSection title="THE MEASURE OF BALANCE">
+          <Tool title="">
+            This is the most powerful concept I've learned to apply,
+            professionally and in life. For anything you might encounter, it's
+            likely that there will be contrasting ways of approaching it, and
+            within those ways you're likely to find extremes. When you go too
+            much into generalization and abstraction, something developers love
+            to do, you over-engineer. And when you don't do enough of it, the
+            work falls short for having little impact or too narrow of a scope.
+            So having an internal radar to detect the right balance can make all
+            the difference.
+            <br />
+            <br />
+            You need to be disciplined, but you also need to be flexible. You
+            need to dream and be creative, but you also need to be realistic and
+            pragmatic as needed. Opposites are everywhere, and people who create
+            stuff need to be able to identify how they influence what they're
+            doing, and consciously act with awareness of them.
           </Tool>
         </ToolsSection>
-        <ToolsSection title="Development tools">
-          <Tool title="Sublime Text 4">
-            I don’t care if it’s missing all of the fancy IDE features everyone
-            else relies on, Sublime Text is still the best text editor ever
-            made.
-          </Tool>
-          <Tool title="iTerm2">
-            I’m honestly not even sure what features I get with this that aren’t
-            just part of the macOS Terminal but it’s what I use.
-          </Tool>
-          <Tool title="TablePlus">
-            Great software for working with databases. Has saved me from
-            building about a thousand admin interfaces for my various projects
-            over the years.
+        <ToolsSection title="THE WILL TO LEARN, AND THE WILL TO TEACH">
+          <Tool title="">
+            I believe that to be great at this one, you first need to have an
+            internal desire for acquiring knowledge and experience, which is
+            initially very personal and individualistic. But then you also need
+            the desire to share and to help others in their own journeys. To
+            have the humility to learn in all situations and from everyone no
+            matter their stance or status. To have the courage to assume
+            leadership and guide others when required.
           </Tool>
         </ToolsSection>
-        <ToolsSection title="Design">
-          <Tool title="Figma">
-            We started using Figma as just a design tool but now it’s become our
-            virtual whiteboard for the entire company. Never would have expected
-            the collaboration features to be the real hook.
+        <ToolsSection title="ASSERTIVE COMMUNICATION">
+          <Tool title="">
+            Everything in the world is communication. Some of us who learned to
+            communicate with the machine through programming languages have made
+            the mistake of thinking that we don't need to be that good at
+            communicating with fellow humans because it's not the main job after
+            all. In general, people in specialized fields tend to believe that
+            there's some sort of compensation that covers one thing with the
+            other. That's just not bad for the person that's not able to
+            articulate their vision and knowledge effectively, it also leaves
+            the space for others who might not be fit for the job to take more
+            relevance than they should by exploiting their charisma and skillful
+            rhetoric. <br />
+            <br />
+            Learning to speak your mind, with precision, with awareness, with
+            determination, is invaluable in any field.
           </Tool>
         </ToolsSection>
-        <ToolsSection title="Productivity">
-          <Tool title="Alfred">
-            It’s not the newest kid on the block but it’s still the fastest. The
-            Sublime Text of the application launcher world.
-          </Tool>
-          <Tool title="Reflect">
-            Using a daily notes system instead of trying to keep things
-            organized by topics has been super powerful for me. And with
-            Reflect, it’s still easy for me to keep all of that stuff
-            discoverable by topic even though all of my writing happens in the
-            daily note.
-          </Tool>
-          <Tool title="SavvyCal">
-            Great tool for scheduling meetings while protecting my calendar and
-            making sure I still have lots of time for deep work during the week.
-          </Tool>
-          <Tool title="Focus">
-            Simple tool for blocking distracting websites when I need to just do
-            the work and get some momentum going.
+        <ToolsSection title="CLEAR PURPOSE ABOVE TOOLING, CLEAR MINDSET ABOVE TECHNIQUE AND METHODOLOGY">
+          <Tool title="">
+            This is a big one in software. There are thousands and thousands of
+            tech stack combinations. Developers can fall easily in a rat race
+            for the newest, most effective, most used and shiniest tool.
+            Although it's important to stay open, accept and sometimes embrace
+            change, this industry in particular is guilty of whimsical behavior,
+            chasing what's new for the sake of it, with minimal returns, and in
+            most cases causing waste and the so-called and dreaded technical
+            debt. <br />
+            <br />I believe that you first need to focus, deeply, on knowing
+            what you're looking for, what is it that you really need to do,
+            what's your purpose. Then you think about what tools to use,
+            accepting that there's probably no perfect one. So you adapt, but
+            you adapt the tools to what your mind needs, not your mind to how
+            the tool works, and that distinction makes a world of difference
+            when developing products, and specially when creating something of
+            any innovative value.
           </Tool>
         </ToolsSection>
       </div>

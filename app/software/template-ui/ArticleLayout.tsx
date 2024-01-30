@@ -30,13 +30,13 @@ export function ArticleLayout({
   children: React.ReactNode;
 }) {
   let router = useRouter();
-  let { previousPathname } = useContext(AppContext);
+  // let { previousPathname } = useContext(AppContext);
 
   return (
     <Container className="mt-16 lg:mt-32">
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
-          {previousPathname && (
+          {
             <button
               type="button"
               onClick={() => router.back()}
@@ -45,7 +45,7 @@ export function ArticleLayout({
             >
               <ArrowLeftIcon className="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
             </button>
-          )}
+          }
           <article>
             <header className="flex flex-col">
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
@@ -56,7 +56,7 @@ export function ArticleLayout({
                 className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
               >
                 <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-                <span className="ml-3">{formatDate(article.date)}</span>
+                <span className="ml-3">{article.customDates}</span>
               </time>
             </header>
             <Prose className="mt-8" data-mdx-content>

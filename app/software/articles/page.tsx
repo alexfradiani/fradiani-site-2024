@@ -6,7 +6,7 @@ import {
   type ArticleWithSlug,
   getAllArticles,
 } from "@/app/software/lib/articles";
-import { formatDate } from "@/app/software/lib/formatDate";
+import Link from "next/link";
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
@@ -21,7 +21,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
           className="md:hidden"
           decorate
         >
-          {formatDate(article.date)}
+          {article.customDates}
         </Card.Eyebrow>
         <Card.Description>{article.description}</Card.Description>
         <Card.Cta>Read more</Card.Cta>
@@ -31,16 +31,15 @@ function Article({ article }: { article: ArticleWithSlug }) {
         dateTime={article.date}
         className="mt-1 hidden md:block"
       >
-        {formatDate(article.date)}
+        {article.customDates}
       </Card.Eyebrow>
     </article>
   );
 }
 
 export const metadata: Metadata = {
-  title: "Articles",
-  description:
-    "All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order.",
+  title: "Career",
+  description: "Companies I've worked with, roles I've played",
 };
 
 export default async function ArticlesIndex() {
@@ -48,9 +47,22 @@ export default async function ArticlesIndex() {
 
   return (
     <SimpleLayout
-      title="Writing on software design, company building, and the aerospace industry."
-      intro="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+      title="Companies I've worked with, roles I've played"
+      intro=""
     >
+      <p className="mb-10 text-base text-zinc-600 dark:text-zinc-400 max-w-2xl">
+        Here's a summary of the major events in my engineering career. If you'd
+        like to read everything in order, start with the last entry at the
+        bottom of the page. On the other hand, if you're interested in a more
+        concise version you can{" "}
+        <Link
+          className="font-medium text-teal-500"
+          href={"/software/Alexander-Fradiani-CV.pdf"}
+        >
+          download the CV{" "}
+        </Link>
+        file.
+      </p>
       <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
         <div className="flex max-w-3xl flex-col space-y-16">
           {articles.map((article) => (
