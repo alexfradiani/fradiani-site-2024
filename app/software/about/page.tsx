@@ -49,7 +49,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 export const metadata: Metadata = {
   title: "About",
-  description: "I'm Alex. Here's my story.",
+  description: "I&apos;m Alex. Here&apos;s my story.",
 };
 
 export default function About() {
@@ -68,35 +68,40 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I'm Alex, eclectic mix of technologist and multidisciplinary artist.
+            I&apos;m Alex, eclectic mix of technologist and multidisciplinary
+            artist.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               My first passion was music, I became obsessed with the guitar when
               I was a teenager. As a kid I loved watching movies and playing
-              videogames, but wasn't overly interested in technology. Then at
-              some point I saw The Matrix trilogy, and to me it wasn't just an
-              entertainnment flick, no, it was a premonition. I remember
-              thinking, "I want to know how the architect created this whole
-              thing", funny, I don't recall phantasizing with being Neo.
+              videogames, but wasn&apos;t overly interested in technology. Then
+              at some point I saw The Matrix trilogy, and to me it wasn&apos;t
+              just an entertainnment flick, no, it was a premonition. I remember
+              thinking, &quot;I want to know how the architect created this
+              whole thing&quot;, funny, I don&apos;t recall phantasizing with
+              being Neo.
             </p>
             <p>
-              More than 20 years later I'm seeing it slowly coming into reality,
-              just look at the most recent AI/VR/AR stuff. It's both exciting
-              and painful because the world is not ready and we're more likely
-              to create dystopia than utopia. But here we are.
+              More than 20 years later I&apos;m seeing it slowly coming into
+              reality, just look at the most recent AI/VR/AR stuff. It&apos;s
+              both exciting and painful because the world is not ready and
+              we&apos;re more likely to create dystopia than utopia. But here we
+              are.
             </p>
             <p>
-              I'm working in carving a path between my artistic strands and the
-              experience and skills I've built in the world of software over the
-              years, I've had periods of polarization towards one or the other
-              in different stages in my life, and I just seem to be always in a
-              process of discovery where the ground is never fully settled.
+              I&apos;m working in carving a path between my artistic strands and
+              the experience and skills I&apos;ve built in the world of software
+              over the years, I&apos;ve had periods of polarization towards one
+              or the other in different stages in my life, and I just seem to be
+              always in a process of discovery where the ground is never fully
+              settled.
             </p>
             <p>
-              Always exploring, always learning, I'm pretty good at a few things
-              but I hope you never catch me saying that I'm an expert in
-              anything. Eternal apprentice, because that's where the fun is at.
+              Always exploring, always learning, I&apos;m pretty good at a few
+              things but I hope you never catch me saying that I&apos;m an
+              expert in anything. Eternal apprentice, because that&apos;s where
+              the fun is at.
             </p>
           </div>
         </div>

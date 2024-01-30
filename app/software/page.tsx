@@ -271,9 +271,9 @@ export default async function Home() {
             Systems Engineer, Senior Full-Stack Developer, Holistic Tech Leader.
           </h2>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hi there, I'm Alex. Currently based in Germany, I like to define
-            myself as a polymath. Starting 2024 I'm keeping two separate
-            profiles, one as author & artist{" "}
+            Hi there, I&apos;m Alex. Currently based in Germany, I like to
+            define myself as a polymath. Starting 2024 I&apos;m keeping two
+            separate profiles, one as author & artist{" "}
             <Link
               href="https://www.alexfrad.com"
               className="font-medium text-teal-500"
@@ -281,7 +281,8 @@ export default async function Home() {
               (alexfrad.com)
             </Link>{" "}
             and this one: a summary of my career in software, and the different
-            roles I've had the opportunity of experiencing during the years.
+            roles I&apos;ve had the opportunity of experiencing during the
+            years.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

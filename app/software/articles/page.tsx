@@ -51,10 +51,10 @@ export default async function ArticlesIndex() {
       intro=""
     >
       <p className="mb-10 text-base text-zinc-600 dark:text-zinc-400 max-w-2xl">
-        Here's a summary of the major events in my engineering career. If you'd
-        like to read everything in order, start with the last entry at the
-        bottom of the page. On the other hand, if you're interested in a more
-        concise version you can{" "}
+        Here&apos;s a summary of the major events in my engineering career. If
+        you&apos;d like to read everything in order, start with the last entry
+        at the bottom of the page. On the other hand, if you&apos;re interested
+        in a more concise version you can{" "}
         <Link
           className="font-medium text-teal-500"
           href={"/software/Alexander-Fradiani-CV.pdf"}
