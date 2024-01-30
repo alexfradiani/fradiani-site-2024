@@ -50,7 +50,7 @@ export default function Home() {
         ref={myRef}
         className="min-h-screen flex flex-col items-center justify-center p-6 md:p-24"
       >
-        <h1 className="text-8xl mb-4 text-center">Pick a Site</h1>
+        <h1 className="text-8xl mb-4 text-center text-white">Pick a Site</h1>
         <div className="flex flex-col justify-center space-y-6 text-xl pt-8 md:flex-row md:w-[750px] md:space-x-6 md:space-y-0">
           <Link
             href="/alexfrad"
